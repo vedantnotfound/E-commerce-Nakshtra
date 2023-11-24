@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head class="overflow-x-hidden">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakshatra Book Depo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100;16..144,200;16..144,300;16..144,400;16..144,500;16..144,600;16..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100;16..144,200;16..144,300;16..144,400;16..144,500;16..144,600;16..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;700&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body::-webkit-scrollbar {
+        width: 0;
+    }
+
+    #btn {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .font {
+        font-family: 'Sora', sans-serif;
+    }
+
+    #scroll::-webkit-scrollbar {
+        width: 0;
+    }
+
+    #bottomSearchCard::-webkit-scrollbar {
+        width: 0;
+    }
+
+    #menu::-webkit-scrollbar {
+        width: 0;
+    }
+
+    #cartDiv::-webkit-scrollbar {
+        width: 0;
+    }
+</style>
+
+<body class="overflow-x-hidden">
+    <!--* Secondry Navbar -->
+    <section id="topNavbar"
+        class="bg-slate-50 flex justify-center md:justify-between py-3 px-5 lg:px-28 border border-[#f2f2f2]">
+        <div class=" hidden sm:flex items-center md:flex lg:flex">
+            <li class="list-none"><a href="" class="text-[14px] font-medium">My Account</a></li>
+            <div class="h-[20px] w-[0.5px] bg-slate-300 mx-3"></div>
+            <li class="list-none"><a href="" class="text-[14px] font-medium">Wishlist</a></li>
+            <div class="h-[20px] w-[1px] bg-slate-300 mx-3 "></div>
+            <li class="list-none"><a href="" class="text-[14px] font-medium">Order Tracking</a></li>
+        </div>
+        <div class="mx-3">
+            <i class="uil uil-telegram text-[25px]"></i>
+        </div>
+    </section>
+
+    <!--* Primary NavBar -->
+    <section id="navbar"
+        class="z-[100] border border-[#f2f2f2] flex justify-between py-3 px-5 items-center bg-slate-100 fixed w-full lg:px-24 md:py-5"
+        style="transition:all 0.3s;">
+        <div class="lg:hidden w-[50px] h-[50px] rounded-full cursor-pointer hover:bg-slate-300 flex justify-center items-center transition-all duration-[0.3s]"
+            id="menuBtn">
+            <i class="uil uil-bars text-[25px]"></i>
+        </div>
+        <img src="/assets/logo.png" alt="" class="w-[8rem] h-auto relative left-2">
+        <div class="hidden items-center bg-slate-200 rounded-full lg:flex border border-[#172554]">
+            <input type="text" placeholder="Search Products..."
+                class="w-[300px] mx-5 my-1 p-[8px] bg-transparent focus:outline-none placeholder:text-blue-950 xl:w-[400px]">
+            <button id="btn" class=" flex items-center py-[12px] px-5 bg-blue-950 font-normal text-white">
+                <p class="mx-1 text-[16px]">Search</p><i class="uil uil-search mx-1"></i>
+            </button>
+        </div>
+        <div class="flex items-center">
+            <div class="hidden md:flex">
+                <i class="uil uil-heart text-[28px]"></i>
+                <div
+                    class="h-[16px] w-[22px] relative bg-blue-950 text-[10px] flex justify-center items-center font-semibold text-white rounded-full top-[22px] left-[-14px] ">
+                    12</div>
+            </div>
+            <div class="h-[20px] w-[0.5px] bg-slate-300 mx-3 hidden md:block relative right-2"></div>
+            <div class="flex cursor-pointer" id="cartBtn">
+                <i class="uil uil-shopping-bag text-[30px]"></i>
+                <div
+                    class="h-[16px] w-[22px] relative bg-blue-950 text-[10px] flex justify-center items-center font-semibold text-white rounded-full top-[24px] left-[-14px] ">
+                    00</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--* Menu  -->
+    <section id="menu"
+        class="transition duration-[0.5s] lg:hidden fixed bg-slate-200 top-0 w-[320px] h-[100%] z-[10000] overflow-y-scroll translate-x-[-320px]">
+        <div class="fixed top-0 left-0 h-[20%]">
+            <div class="flex justify-between px-8 py-4 bg-slate-100 fixed w-[320px] z-[10000]">
+                <img src="/assets/logo.png" alt="" class="w-[6.8rem] h-[2.5rem]">
+                <div class=" w-[50px] h-[50px] rounded-full cursor-pointer hover:bg-slate-300 flex justify-center items-center transition-all duration-[0.3s]"
+                    id="closeBtn">
+                    <i class="uil uil-multiply text-[20px]"></i>
+                </div>
+            </div>
+
+            <div
+                class="myScroll fixed flex items-center justify-between px-8 py-4 z-[10000] border-b-[2px] bg-[#172564] w-[320px] top-[80px]">
+                <div class="font-medium text-[#ffffff]">
+                    Categories
+                </div>
+                <div class="w-[1px] h-[40px] bg-[#ffffff]"></div>
+                <div class="font-medium text-[#ffffff]">
+                    Main Menu
+                </div>
+            </div>
+        </div>
+
+        <div id="scroll" class="relative top-[155px] h-[80%] overflow-y-scroll">
+            <div class="text-[17px] font-medium px-8 py-4  border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+            <div class="text-[17px] font-medium px-8 py-4 border-b-[1px] border-[#cccccc]  ">Agrogya</div>
+        </div>
+    </section>
+
+    <!--* Cart Section  -->
+
+    <section id="cart"
+        class="fixed right-0 top-0 bg-slate-100 h-[100%] w-[320px] z-[10000] translate-x-[570px] transition duration-[0.5s] sm:w-[550px]">
+
+        <div class="h-[10%] flex items-center justify-between px-8 py-4 bg-[#172564]">
+            <div class="group w-[50px] h-[50px] rounded-full cursor-pointer hover:bg-slate-300 flex justify-center items-center transition-all duration-[0.3s]"
+                id="cartCloseBtn">
+                <i class="uil uil-multiply text-[20px] text-white group-hover:text-[#172564]"></i>
+            </div>
+            <div class="flex items-center">
+                <p class="text-[18px] font-[500] text-[#ffffff]">Cart</p>
+                <i class="uil uil-shopping-bag text-[23px] mx-2 text-white"></i>
+            </div>
+        </div>
+
+
+        <p id="msg" class="text-[18px] font font-medium text-center p-4 relative top-[20px]">No Products to Show</p>
+
+        <div id="cartDiv" class=" h-[90%] overflow-y-scroll">
+            <div
+                class="rounded-[10px] group flex cardx items-center my-5 p-2 mx-[9px] bg-slate-300 w-[300px] sm:w-[520px] h-[90px] sm:h-[100px] sm:m-4 cursor-pointer overflow-hidden">
+                <!-- <img src="/assets/product1.webp" alt="" class="w-[70px] h-[70px] rounded-[4px] sm:h-[90px] sm:w-[90px] sm:p-1 sm:rounded-[10px]"> -->
+                <div class="relative left-[20px] ">
+                    <h2
+                        class="text-[17px] sm:text-[18px] font-semibold text-[#172564] w-[200px] sm:w-[300px] text-ellipsis overflow-hidden whitespace-nowrap sm:my-2">
+                        Explore Our Products</h2>
+                    <p>Free Home Delivery </p>
+
+                </div>
+                <div class="relative">
+                    <button
+                        class="sm:group-hover:translate-x-[-30px] group-hover:translate-x-[20px] transition duration-[0.5s] relative w-[70px] h-[90px] right-0 bg-[#172554] translate-x-[130px] flex justify-center items-center flex-col sm:h-[120px] sm:w-[150px]">
+                    
+                        <i class="uil uil-multiply text-[20px] text-white"></i>
+
+                    </button>
+                </div>
+            </div>
+        </div>    
+
+    </section>
+
+    <!-- * 3rd Navbar -->
+    <section class="relative top-[100px] lg:top-32 flex items-center lg:justify-between flex-wrap justify-center ">
+        <div
+            class="hidden sm:flex items-center relative lg:left-[7%] flex-wrap lg:w-[51%] justify-center lg:justify-normal ">
+            <div class="flex items-center mx-2">
+                <i class="uil uil-shopping-cart-alt font-semibold text-[20px] text-[#265D79]"></i>
+                <a href="" class="text-[13px] font-medium mx-2 text-[#265D79]">My Order</a>
+            </div>
+            <div class="flex items-center mx-2 justify-center ">
+                <i class="uil uil-user-circle text-[#265D79] text-[22px]"></i>
+                <a href="" class="text-[13px] font-medium mx-2 text-[#265D79]">Profile</a>
+            </div>
+            <div class="flex items-center mx-2">
+                <i class="uil uil-rss text-[20px] text-[#265D79]"></i>
+                <a href="" class="text-[13px] font-medium mx-2 text-[#265D79]">Regular Updates</a>
+            </div>
+            <div class="flex items-center mx-2">
+                <i class="uil uil-question-circle font-semibold text-[22px] text-[#265D79]"></i>
+                <a href="" class="text-[13px] font-medium mx-2 text-[#265D79]">Ask for book</a>
+            </div>
+            <div class="flex items-center mx-2">
+                <div
+                    class="h-[18px] w-[18px] flex justify-center items-center border-[2px] border-[#265D79] rounded-full text-[#265D79]">
+                    <i class="uil uil-info font-semibold text-[22px] text-[#265D79]"></i>
+                </div>
+                <a href="" class="text-[13px] font-medium mx-2 text-[#265D79]">Help</a>
+            </div>
+            <div class="flex items-center mx-2">
+                <i class="uil uil-book-alt font-semibold text-[20px] text-[#265D79]"></i>
+                <a href="" class="text-[13px] font-medium mx-2 text-[#265D79]">Bookshelf (All Books)</a>
+            </div>
+        </div>
+        <div class="items-center  relative hidden lg:flex lg:right-[5%] mx-9">
+            <div class="flex items-center justify-center ">
+                <div class="w-[35px] h-[35px] bg-[#172554] rounded-full flex justify-center items-center">
+                    <i class="uil uil-user text-white text-[18px]"></i>
+                </div>
+                <h1 class="font-medium text-[#172554] mx-3">Account</h1>
+            </div>
+            <div class="flex mx-3 items-center ">
+                <div class="w-[35px] h-[35px] bg-[#f2f2f2] rounded-full flex justify-center items-center">
+                    <i class="uil uil-phone-volume text-[18px] text-[#191919] relative top-[2px]"></i>
+                </div>
+                <div class="mx-3">
+                    <h1 class="font-medium text-[#172554]">02413590019</h1>
+                    <p class="text-[12px]">for orders related help</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--* Bottom Navbar  -->
+
+    <section id="bottomNav"
+        class=" bg-slate-100 fixed w-full flex justify-around items-center bottom-0 z-[1000] md:hidden">
+        <div class="flex justify-center flex-col items-center p-4 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                    d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+            </svg>
+            <p>Home</p>
+        </div>
+        <div class="flex justify-center flex-col items-center  p-4 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+            </svg>
+            <p>Account</p>
+        </div>
+        <div class="hover:bg-slate-400 flex justify-center flex-col items-center p-4 cursor-pointer"
+            id="bottomSearchTab">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
+            <p>Search</p>
+        </div>
+        <div class="flex justify-center flex-col items-center  p-4 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+            </svg>
+            <p>Wishlist</p>
+        </div>
+    </section>
+
+    <!--* Bottom Serach Bar -->
+    <section class="fixed w-full h-full bg-[#0000008b] z-[10000] hidden bottom-20" id="searchBlackScreen">
+        <section id="bottomSearch"
+            class="md:hidden fixed bottom-[70px] left-0 bg-slate-50 w-full z-[100000] p-4 h-[400px] translate-y-[600px] transition duration-[0.5s]">
+            <div class="flex items-center justify-around  mr-5">
+                <div class="relative left-[40px]">
+                    <i class="uil uil-search text-[#172554] text-[20px]"></i>
+                </div>
+                <input type="text" autocomplete="off" id="searchInput"
+                    class="relative left-[50px] p-4 focus:outline-none border-none bg-transparent"
+                    placeholder="Search Products">
+
+
+                <div id="closeSearchBar"
+                    class="relative right-[30px] h-[50px] w-[50px] flex justify-center items-center rounded-full hover:bg-slate-300 transition duration-[0.5s] cursor-pointer">
+                    <i class="uil uil-multiply text-[#172554] text-[20px]"></i>
+                </div>
+            </div>
+
+            <div id="bottomSearchCard"
+                class=" flex flex-col items-center h-[350px] relative top-[10px] overflow-y-scrol">
+                <div
+                    class="hidden cardx group items-center m-2 p-2 bg-slate-50 w-[320px] sm:w-[520px] h-[90px] sm:h-[100px] sm:m-4 cursor-pointer overflow-hidden top-0">
+                    <img src="/assets/product1.webp" alt=""
+                        class="w-[70px] h-[70px] rounded-[4px] sm:h-[90px] sm:w-[90px] sm:p-1 sm:rounded-[10px]">
+                    <div class="relative left-[20px] ">
+                        <h2
+                            class="text-[15px] sm:text-[18px] font-semibold text-[#172564] w-[180px] sm:w-[300px] text-ellipsis overflow-hidden whitespace-nowrap sm:my-2">
+                            Vedant Dikonda</h2>
+                        <div class="relative flex items-center sm:my-2">
+                            <h1 class="text-[#172564] font-semibold text-[16px] sm:text-[18px]">₹589.00</h1>
+                            <h1 class="line-through text-[#808080] mx-4 font-medium"> ₹720.00</h1>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <button
+                            class="translate-x-[130px] sm:group-hover:translate-x-[-28px] group-hover:translate-x-[-42px] transition duration-[0.5s] relative w-[90px] h-[90px] right-0 bg-[#172554]  flex justify-center items-center flex-col sm:h-[120px] sm:w-[150px]">
+                            <p class="font-medium text-white ml-1">Add</p>
+                            <i class="uil uil-shopping-bag text-[23px] text-white ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div
+                    class="hidden cardx group items-center m-2 p-2 bg-slate-50 w-[320px] sm:w-[520px] h-[90px] sm:h-[100px] sm:m-4 cursor-pointer overflow-hidden top-0">
+                    <img src="/assets/product1.webp" alt=""
+                        class="w-[70px] h-[70px] rounded-[4px] sm:h-[90px] sm:w-[90px] sm:p-1 sm:rounded-[10px]">
+                    <div class="relative left-[20px] ">
+                        <h2
+                            class="text-[15px] sm:text-[18px] font-semibold text-[#172564] w-[180px] sm:w-[300px] text-ellipsis overflow-hidden whitespace-nowrap sm:my-2">
+                            Vedant Yengupatla</h2>
+                        <div class="relative flex items-center sm:my-2">
+                            <h1 class="text-[#172564] font-semibold text-[16px] sm:text-[18px]">₹589.00</h1>
+                            <h1 class="line-through text-[#808080] mx-4 font-medium"> ₹720.00</h1>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <button
+                            class="translate-x-[130px] sm:group-hover:translate-x-[-28px] group-hover:translate-x-[-42px] transition duration-[0.5s] relative w-[90px] h-[90px] right-0 bg-[#172554]  flex justify-center items-center flex-col sm:h-[120px] sm:w-[150px]">
+                            <p class="font-medium text-white ml-1">Add</p>
+                            <i class="uil uil-shopping-bag text-[23px] text-white ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <div
+                    class="hidden cardx group items-center m-2 p-2 bg-slate-50 w-[320px] sm:w-[520px] h-[90px] sm:h-[100px] sm:m-4 cursor-pointer overflow-hidden top-0">
+                    <img src="/assets/product1.webp" alt=""
+                        class="w-[70px] h-[70px] rounded-[4px] sm:h-[90px] sm:w-[90px] sm:p-1 sm:rounded-[10px]">
+                    <div class="relative left-[20px] ">
+                        <h2
+                            class="text-[15px] sm:text-[18px] font-semibold text-[#172564] w-[180px] sm:w-[300px] text-ellipsis overflow-hidden whitespace-nowrap sm:my-2">
+                            Siddhant</h2>
+                        <div class="relative flex items-center sm:my-2">
+                            <h1 class="text-[#172564] font-semibold text-[16px] sm:text-[18px]">₹589.00</h1>
+                            <h1 class="line-through text-[#808080] mx-4 font-medium"> ₹720.00</h1>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <button
+                            class="translate-x-[130px] sm:group-hover:translate-x-[-28px] group-hover:translate-x-[-42px] transition duration-[0.5s] relative w-[90px] h-[90px] right-0 bg-[#172554]  flex justify-center items-center flex-col sm:h-[120px] sm:w-[150px]">
+                            <p class="font-medium text-white ml-1">Add</p>
+                            <i class="uil uil-shopping-bag text-[23px] text-white ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+    </section>
+
+
+
+    <section id="home">
+        <div class="w-[100%] sm:w-[90%] relative sm:left-[5%] top-[70px] sm:top-[120px] lg:top-[160px] overflow-hidden">
+            <img src="/assets/homeimg.webp" alt="" class="sm:rounded-md md:rounded-[20px] lg:rounded-[30px]">
+        </div>
+        <div class="flex justify-center items-center relative lg:top-[180px] md:top-[150px] sm:top-[150px] top-[90px]">
+            <div
+                class="cursor-pointer w-[7px] h-[7px] sm:w-[10px] sm:h-[10px] rounded-full border-[2px] border-[#172554] mx-2 bg-[#172554]">
+            </div>
+            <div
+                class="cursor-pointer w-[7px] h-[7px] sm:w-[10px] sm:h-[10px] rounded-full border-[2px] border-[#cccccc] mx-2">
+            </div>
+            <div
+                class="cursor-pointer w-[7px] h-[7px] sm:w-[10px] sm:h-[10px] rounded-full border-[2px] border-[#cccccc] mx-2">
+            </div>
+        </div>
+    </section>
+
+    <section class="flex justify-center items-center relative left-[5%] w-[90%]">
+        <div class="flex items-center justify-center relative top-[100px] sm:top-[200px] flex-wrap">
+            <img src="/assets/home1img.webp" alt=""
+                class="sm:rounded-[10px] lg:rounded-[20px] m-2 sm:m-4 sm:drop-shadow-lg w-[30rem] border-[1px] border-[#cccccc]">
+            <img src="/assets/home2img.webp" alt=""
+                class="sm:rounded-[10px] lg:rounded-[20px]  m-2 sm:m-4 sm:drop-shadow-lg w-[30rem] border-[1px] border-[#cccccc]">
+
+            <img src="/assets/home3img.webp" alt=""
+                class="sm:rounded-[10px] lg:rounded-[20px]  m-2 sm:m-4 sm:drop-shadow-lg w-[30rem] border-[1px] border-[#cccccc]">
+        </div>
+    </section>
+
+    <!--* Products -->
+    <section class="relative top-[140px] sm:top-[240px] pb-20">
+        <div class="flex justify-between items-center">
+            <h1 class="relative left-[5%] font text-[1.4rem] sm:text-[2rem] font-semibold text-[#0c1335]">New Arrivals
+            </h1>
+            <div class="sm:w-[30%] md:w-[45%] lg:w-[55%] xl:w-[60%] h-[1px] bg-[#cccccc]"></div>
+            <button
+                class="relative right-[5%] px-4 py-2 sm:px-6 sm:py-3 bg-[#172564] text-white font-medium rounded-full">View
+                All <i class="uil uil-angle-right-b"></i></button>
+        </div>
+
+        <!--* products  -->
+        <div class="flex justify-center relative top-[0px] sm:top-[50px] flex-wrap">
+            <div class="flex flex-col justify-center">
+
+                <!--* 1st Product  -->
+                <div
+                    class="group flex items-center flex-col my-5 mx-8 sm:my-10  w-[280px] h-[280px] md:w-[300px] md:h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[400px] lg:h-[400px] cursor-pointer overflow-hidden">
+                    <div
+                        class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                        30%
+                    </div>
+                    <img src="/assets/product1.webp" alt="" class="rounded-[15px]">
+                    <div class=" relative bottom-[190px] left-[400px] ">
+                        <div
+                            class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                            <i class="uil uil-heart text-[20px]"></i>
+                        </div>
+                        <div
+                            class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                            <i class="uil uil-eye text-[20px]"></i>
+                        </div>
+                        <div
+                            class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                            <i class="uil uil-shopping-bag text-[20px]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative top-[-20px]">
+                    <h2
+                        class="text-[1.2rem] mx-8 font-semibold text-[#172564] w-[280px] md:w-[300px] lg:w-[400px] text-ellipsis overflow-hidden whitespace-nowrap">
+                        LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                    <div class="mx-8">
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                    </div>
+                </div>
+                <div class="mx-8 relative top-[-20px] flex items-center">
+                    <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                    <h1 class="line-through text-[#808080] mx-4 font-medium"> ₹720.00</h1>
+                </div>
+            </div>
+
+            <div class="hidden lg:block w-[0.5px] h-[520px] bg-[#cccccc] relative top-[40px]"></div>
+
+
+            <!--* 2nd Product -->
+            <div class="flex flex-col justify-center">
+                <div
+                    class="flex items-center flex-col my-5 mx-8 sm:my-10 group w-[280px] h-[280px] md:w-[300px] md:h-[300px] sm:w-[400px] sm:h-[400px]  lg:w-[400px] lg:h-[400px] cursor-pointer overflow-hidden">
+                    <div
+                        class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                        30%
+                    </div>
+                    <img src="/assets/product1.webp" alt="" class="rounded-[15px]">
+                    <div class=" relative bottom-[190px] left-[400px] ">
+                        <div
+                            class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                            <i class="uil uil-heart text-[20px]"></i>
+                        </div>
+                        <div
+                            class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                            <i class="uil uil-eye text-[20px]"></i>
+                        </div>
+                        <div
+                            class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                            <i class="uil uil-shopping-bag text-[20px]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative top-[-20px]">
+                    <h2
+                        class="text-[1.2rem] mx-8 font-semibold text-[#172564] w-[280px] md:w-[300px] lg:w-[400px] text-ellipsis overflow-hidden whitespace-nowrap">
+                        LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                    <div class="mx-8">
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                    </div>
+                </div>
+                <div class="mx-8 relative top-[-20px] flex items-center">
+                    <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                    <h1 class="line-through text-[#808080] mx-4 font-medium"> ₹720.00</h1>
+                </div>
+            </div>
+
+            <div class="hidden lg:hidden 2xl:block w-[1px] h-[520px] bg-[#cccccc] relative top-[40px]"></div>
+
+            <div class="flex flex-col justify-center">
+                <div
+                    class="flex items-center flex-col my-5 mx-8 sm:my-10 group w-[280px] h-[280px] md:w-[300px] md:h-[300px]  sm:w-[400px] sm:h-[400px]  lg:w-[400px] lg:h-[400px] cursor-pointer overflow-hidden">
+                    <div
+                        class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                        30%
+                    </div>
+                    <img src="/assets/product1.webp" alt="" class="rounded-[15px]">
+                    <div class=" relative bottom-[190px] left-[400px] ">
+                        <div
+                            class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                            <i class="uil uil-heart text-[20px]"></i>
+                        </div>
+                        <div
+                            class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                            <i class="uil uil-eye text-[20px]"></i>
+                        </div>
+                        <div
+                            class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                            <i class="uil uil-shopping-bag text-[20px]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative top-[-20px]">
+                    <h2
+                        class="text-[1.2rem] mx-8 font-semibold text-[#172564] w-[280px] md:w-[300px] lg:w-[400px] text-ellipsis overflow-hidden whitespace-nowrap">
+                        LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                    <div class="mx-8">
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                    </div>
+                </div>
+                <div class="mx-8 relative top-[-20px] flex items-center">
+                    <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                    <h1 class="line-through text-[#808080] mx-4 font-medium"> ₹720.00</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--* Scroll Books -->
+    <section class="relative sm:top-[250px]">
+        <div class="flex justify-between items-center relative top-[100px] sm:top-[10px]">
+            <h1 class="relative left-[5%] font text-[1.4rem] sm:text-[2rem] font-semibold text-[#0c1335]">Trending Now
+            </h1>
+            <div class="sm:w-[30%] md:w-[45%] lg:w-[55%] xl:w-[60%] h-[1px] bg-[#cccccc]"></div>
+            <button
+                class="relative right-[5%] px-4 py-2 sm:px-6 sm:py-3 bg-[#172564] text-white font-medium rounded-full">View
+                All <i class="uil uil-angle-right-b"></i></button>
+        </div>
+
+        <section class="flex items-center flex-col xl:flex-row">
+            <section
+                class="flex items-center w-[350px] sm:w-[700px] sm:justify-normal justify-normal lg:justify-center lg:w-[80%] relative top-[120px] sm:top-[50px] overflow-x-hidden xl:w-[65%] xl:left-[5%] xl:justify-normal">
+                <div>
+                    <div
+                        class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                        <div
+                            class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                            30%
+                        </div>
+                        <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                        <div class=" relative bottom-[190px] left-[400px] ">
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                <i class="uil uil-heart text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-eye text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-shopping-bag text-[20px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative top-[-10px]">
+                        <h2
+                            class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                            LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                        <div class="mx-4">
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        </div>
+                    </div>
+                    <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                        <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                        <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                    </div>
+                </div>
+
+                <div class="w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                <div>
+                    <div
+                        class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                        <div
+                            class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                            30%
+                        </div>
+                        <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                        <div class=" relative bottom-[190px] left-[400px] ">
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                <i class="uil uil-heart text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-eye text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-shopping-bag text-[20px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative top-[-10px]">
+                        <h2
+                            class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                            LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                        <div class="mx-4">
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        </div>
+                    </div>
+                    <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                        <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                        <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                    </div>
+                </div>
+
+                <div class="w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                <div>
+                    <div
+                        class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                        <div
+                            class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                            30%
+                        </div>
+                        <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                        <div class=" relative bottom-[190px] left-[400px] ">
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                <i class="uil uil-heart text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-eye text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-shopping-bag text-[20px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative top-[-10px]">
+                        <h2
+                            class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                            LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                        <div class="mx-4">
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        </div>
+                    </div>
+                    <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                        <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                        <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                    </div>
+                </div>
+
+                <div class="hidden sm:block w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                <div class="">
+                    <div
+                        class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                        <div
+                            class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                            30%
+                        </div>
+                        <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                        <div class=" relative bottom-[190px] left-[400px] ">
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                <i class="uil uil-heart text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-eye text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-shopping-bag text-[20px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative top-[-10px]">
+                        <h2
+                            class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                            LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                        <div class="mx-4">
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        </div>
+                    </div>
+                    <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                        <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                        <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                    </div>
+                </div>
+
+                <div class="w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                <div class="">
+                    <div
+                        class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                        <div
+                            class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                            30%
+                        </div>
+                        <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                        <div class=" relative bottom-[190px] left-[400px] ">
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                <i class="uil uil-heart text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-eye text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-shopping-bag text-[20px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative top-[-10px]">
+                        <h2
+                            class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                            LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                        <div class="mx-4">
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        </div>
+                    </div>
+                    <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                        <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                        <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                    </div>
+                </div>
+            </section>
+
+            <img src="/assets/sale.webp" alt=""
+                class="rounded-[10px] relative top-[130px] sm:top-[60px] xl:w-[27%] xl:right-[-1%] xl:top-[43px]">
+        </section>
+
+
+        <!--* 2nd Scroll Bar -->
+        <section class="relative top-[100px] sm:top-[250px] xl:top-[100px]">
+            <div class="flex justify-between items-center relative top-[100px] sm:top-[10px]">
+                <h1 class="relative left-[5%] font text-[1.4rem] sm:text-[2rem] font-semibold text-[#0c1335]">
+                    BestSelling Books
+                </h1>
+                <div class="sm:w-[30%] md:w-[45%] lg:w-[55%] xl:w-[60%] h-[1px] bg-[#cccccc]"></div>
+                <button
+                    class="relative right-[5%] px-4 py-2 sm:px-6 sm:py-3 bg-[#172564] text-white font-medium rounded-full">View
+                    All <i class="uil uil-angle-right-b"></i></button>
+            </div>
+
+            <section class="flex items-center flex-col xl:flex-row">
+                <section
+                    class="flex items-center w-[350px] sm:w-[700px] sm:justify-normal justify-normal lg:justify-center lg:w-[80%] relative top-[120px] sm:top-[50px] overflow-x-hidden xl:w-[65%] xl:left-[5%] xl:justify-normal">
+                    <div>
+                        <div
+                            class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                            <div
+                                class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                                30%
+                            </div>
+                            <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                            <div class=" relative bottom-[190px] left-[400px] ">
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                    <i class="uil uil-heart text-[20px]"></i>
+                                </div>
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                    <i class="uil uil-eye text-[20px]"></i>
+                                </div>
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                    <i class="uil uil-shopping-bag text-[20px]"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative top-[-10px]">
+                            <h2
+                                class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                                LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                            <div class="mx-4">
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            </div>
+                        </div>
+                        <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                            <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                            <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                        </div>
+                    </div>
+
+                    <div class="w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                    <div>
+                        <div
+                            class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                            <div
+                                class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                                30%
+                            </div>
+                            <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                            <div class=" relative bottom-[190px] left-[400px] ">
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                    <i class="uil uil-heart text-[20px]"></i>
+                                </div>
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                    <i class="uil uil-eye text-[20px]"></i>
+                                </div>
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                    <i class="uil uil-shopping-bag text-[20px]"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative top-[-10px]">
+                            <h2
+                                class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                                LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                            <div class="mx-4">
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            </div>
+                        </div>
+                        <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                            <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                            <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                        </div>
+                    </div>
+
+                    <div class="w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                    <div>
+                        <div
+                            class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                            <div
+                                class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                                30%
+                            </div>
+                            <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                            <div class=" relative bottom-[190px] left-[400px] ">
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                    <i class="uil uil-heart text-[20px]"></i>
+                                </div>
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                    <i class="uil uil-eye text-[20px]"></i>
+                                </div>
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                    <i class="uil uil-shopping-bag text-[20px]"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative top-[-10px]">
+                            <h2
+                                class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                                LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                            <div class="mx-4">
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            </div>
+                        </div>
+                        <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                            <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                            <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                        </div>
+                    </div>
+
+                    <div class="hidden sm:block w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                    <div class="">
+                        <div
+                            class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                            <div
+                                class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                                30%
+                            </div>
+                            <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                            <div class=" relative bottom-[190px] left-[400px] ">
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                    <i class="uil uil-heart text-[20px]"></i>
+                                </div>
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                    <i class="uil uil-eye text-[20px]"></i>
+                                </div>
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                    <i class="uil uil-shopping-bag text-[20px]"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative top-[-10px]">
+                            <h2
+                                class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                                LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                            <div class="mx-4">
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            </div>
+                        </div>
+                        <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                            <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                            <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                        </div>
+                    </div>
+
+                    <div class="w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                    <div class="">
+                        <div
+                            class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                            <div
+                                class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                                30%
+                            </div>
+                            <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                            <div class=" relative bottom-[190px] left-[400px] ">
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                    <i class="uil uil-heart text-[20px]"></i>
+                                </div>
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                    <i class="uil uil-eye text-[20px]"></i>
+                                </div>
+                                <div
+                                    class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                    <i class="uil uil-shopping-bag text-[20px]"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative top-[-10px]">
+                            <h2
+                                class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                                LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                            <div class="mx-4">
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                                <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            </div>
+                        </div>
+                        <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                            <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                            <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                        </div>
+                    </div>
+                </section>
+
+                <img src="/assets/sale.webp" alt=""
+                    class="rounded-[10px] relative top-[130px] sm:top-[60px] xl:w-[27%] xl:right-[-1%] xl:top-[43px]">
+
+            </section>
+        </section>
+    </section>
+
+    <!--* 3rd Scroll Bar -->
+    <section class="relative top-[200px] sm:top-[650px] xl:top-[450px]">
+        <div class="flex justify-between items-center relative top-[100px] sm:top-[10px]">
+            <h1 class="relative left-[5%] font text-[1.4rem] sm:text-[2rem] font-semibold text-[#0c1335]">Popular Now
+            </h1>
+            <div class="sm:w-[30%] md:w-[45%] lg:w-[55%] xl:w-[60%] h-[1px] bg-[#cccccc]"></div>
+            <button
+                class="relative right-[5%] px-4 py-2 sm:px-6 sm:py-3 bg-[#172564] text-white font-medium rounded-full">View
+                All <i class="uil uil-angle-right-b"></i></button>
+        </div>
+
+        <section class="flex items-center flex-col xl:flex-row">
+            <section
+                class="flex items-center w-[350px] sm:w-[700px] sm:justify-normal justify-normal lg:justify-center lg:w-[80%] relative top-[120px] sm:top-[50px] overflow-x-hidden xl:w-[65%] xl:left-[5%] xl:justify-normal">
+                <div>
+                    <div
+                        class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                        <div
+                            class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                            30%
+                        </div>
+                        <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                        <div class=" relative bottom-[190px] left-[400px] ">
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                <i class="uil uil-heart text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-eye text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-shopping-bag text-[20px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative top-[-10px]">
+                        <h2
+                            class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                            LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                        <div class="mx-4">
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        </div>
+                    </div>
+                    <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                        <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                        <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                    </div>
+                </div>
+
+                <div class="w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                <div>
+                    <div
+                        class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                        <div
+                            class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                            30%
+                        </div>
+                        <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                        <div class=" relative bottom-[190px] left-[400px] ">
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                <i class="uil uil-heart text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-eye text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-shopping-bag text-[20px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative top-[-10px]">
+                        <h2
+                            class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                            LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                        <div class="mx-4">
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        </div>
+                    </div>
+                    <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                        <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                        <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                    </div>
+                </div>
+
+                <div class="w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                <div>
+                    <div
+                        class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                        <div
+                            class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                            30%
+                        </div>
+                        <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                        <div class=" relative bottom-[190px] left-[400px] ">
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                <i class="uil uil-heart text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-eye text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-shopping-bag text-[20px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative top-[-10px]">
+                        <h2
+                            class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                            LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                        <div class="mx-4">
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        </div>
+                    </div>
+                    <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                        <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                        <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                    </div>
+                </div>
+
+                <div class="hidden sm:block w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                <div class="">
+                    <div
+                        class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                        <div
+                            class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                            30%
+                        </div>
+                        <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                        <div class=" relative bottom-[190px] left-[400px] ">
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                <i class="uil uil-heart text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-eye text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-shopping-bag text-[20px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative top-[-10px]">
+                        <h2
+                            class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                            LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                        <div class="mx-4">
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        </div>
+                    </div>
+                    <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                        <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                        <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                    </div>
+                </div>
+
+                <div class="w-[0.5px] h-[250px] sm:h-[290px] bg-[#cccccc]"></div>
+
+                <div class="">
+                    <div
+                        class="group flex items-center flex-col my-5 mx-4 sm:my-4  w-[150px] h-[150px] md:w-[200px] md:h-[200px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] cursor-pointer overflow-hidden">
+                        <div
+                            class="font flex justify-center items-center absolute w-[50px] h-[50px] rounded-full bg-yellow-400 font-medium text-[#181818] m-5 text-[14px]">
+                            30%
+                        </div>
+                        <img src="/assets/product1.webp" alt="" class="rounded-[7px] sm:rounded-[15px]">
+                        <div class=" relative bottom-[190px] left-[400px] ">
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0s] my-2 flex justify-center items-center  w-[50px] h-[50px] bg-white rounded-full drop-shadow-lg">
+                                <i class="uil uil-heart text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.1s]  my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-eye text-[20px]"></i>
+                            </div>
+                            <div
+                                class="group-hover:translate-x-[-65px] transition duration-[0.5s] delay-[0.2s] my-2 flex justify-center items-center  w-[50px] h-[50px]  bg-white  rounded-full drop-shadow-lg">
+                                <i class="uil uil-shopping-bag text-[20px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative top-[-10px]">
+                        <h2
+                            class="text-[1.2rem] mx-4 font-semibold text-[#172564] w-[150px] md:w-[200px] lg:w-[200px] text-ellipsis overflow-hidden whitespace-nowrap">
+                            LAW MH-CET/CLAT (MARATHI) LLB 3YRS & LLB</h2>
+                        <div class="mx-4">
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                            <span class=" text-[23px] text-[#cccccc] cursor-pointer">&star;</span>
+                        </div>
+                    </div>
+                    <div class="mx-4 relative top-[-20px] flex sm:items-center flex-col sm:flex-row ">
+                        <h1 class="text-[#172564] font-semibold text-[23px]">₹589.00</h1>
+                        <h1 class="line-through text-[#808080] sm:mx-4 font-medium"> ₹720.00</h1>
+                    </div>
+                </div>
+            </section>
+
+            <img src="/assets/sale.webp" alt=""
+                class="rounded-[10px] relative top-[130px] sm:top-[60px] xl:w-[27%] xl:right-[-1%] xl:top-[43px]">
+
+        </section>
+    </section>
+    </section>
+    <script src="/index.js"></script>
+</body>
+
+</html>
